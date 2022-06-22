@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JS</title>
+</head>
+<body>
+
+    <h1>
+       A simple js calc
+
+    </h1>
+
+    <script>
+        // assign variable to the operator
+var operator;
+
+// assign variable for the result
+var answer;
+
+        // prompt for the operation to be performed
+while (true) {
+    operator = prompt(
+        'Enter the operation you want to perform \n Input + for Addition \n Input - for Subtraction \n Input * for Multiplication or \n Input / for division ): '
+    );
+    if (
+        //  if the input is not valid, alert the user and try again
+        !["+","-","*","/"].includes(operator)
+        ) {
+        alert('Error! This is not a valid operator. Try again');
+    } else {
+        break;
+    }
+}
+
+// prompt user to input the first number
+let firstNumber = prompt(
+    'Enter the first number: '
+    );
+
+// prompt user to input the second number
+let secondNumber = prompt(
+    'Enter the second number: '
+    );
+     
+  
+    if(operator === "+"){
+     answer = Number(firstNumber) + Number(secondNumber);
+    } else if(operator === "-"){
+     answer = Number(firstNumber) - Number(secondNumber);
+    } else if(operator === "*"){
+      answer = Number(firstNumber) * Number(secondNumber);
+    } else(operator === "/")
+        answer = Number(firstNumber) / Number(secondNumber);
+    
+
+    alert(`${firstNumber} ${operator} ${secondNumber} = ${answer}`);
+    </script>
+
+</body>
+</html>
