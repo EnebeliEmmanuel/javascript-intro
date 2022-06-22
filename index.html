@@ -9,54 +9,17 @@
 <body>
 
     <h1>
-       A simple js calc
-
+        A brief Introduction about me
     </h1>
 
     <script>
-        // assign variable to the operator
-var operator;
+       let user ={
+    name:"Emmanuel Enebeli",
+    height: "6 ft 9 inch",
+    country: "Nigeria"
+} 
 
-// assign variable for the result
-var answer;
-
-        // prompt for the operation to be performed
-while (true) {
-    operator = prompt(
-        'Enter the operation you want to perform \n Input + for Addition \n Input - for Subtraction \n Input * for Multiplication or \n Input / for division ): '
-    );
-    if (
-        //  if the input is not valid, alert the user and try again
-        !["+","-","*","/"].includes(operator)
-        ) {
-        alert('Error! This is not a valid operator. Try again');
-    } else {
-        break;
-    }
-}
-
-// prompt user to input the first number
-let firstNumber = prompt(
-    'Enter the first number: '
-    );
-
-// prompt user to input the second number
-let secondNumber = prompt(
-    'Enter the second number: '
-    );
-     
-  
-    if(operator === "+"){
-     answer = Number(firstNumber) + Number(secondNumber);
-    } else if(operator === "-"){
-     answer = Number(firstNumber) - Number(secondNumber);
-    } else if(operator === "*"){
-      answer = Number(firstNumber) * Number(secondNumber);
-    } else(operator === "/")
-        answer = Number(firstNumber) / Number(secondNumber);
-    
-
-    alert(`${firstNumber} ${operator} ${secondNumber} = ${answer}`);
+alert(`My name is ${user.name}, I am ${user.height} tall. I am from ${user.country}  `);
     </script>
 
 </body>
